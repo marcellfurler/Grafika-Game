@@ -4,7 +4,7 @@ canvas.width = 800;
 canvas.height = 400;
 document.body.appendChild(canvas);
 
-var sunY = 230; 
+var sunY = 250; 
 
 function drawScene() {
     // Clear the canvas
@@ -28,8 +28,8 @@ function drawScene() {
     // Gunungs
     ctx.beginPath(); 
     ctx.moveTo(200, 50); 
-    ctx.lineTo(100, 300);
-    ctx.lineTo(300, 300);
+    ctx.lineTo(10, 300);
+    ctx.lineTo(400, 300);
     ctx.closePath();
     ctx.fillStyle = "darkgreen";
     ctx.fill();
@@ -38,8 +38,8 @@ function drawScene() {
 
     ctx.beginPath();
     ctx.moveTo(350, 50);  
-    ctx.lineTo(250, 300);
-    ctx.lineTo(450, 300);
+    ctx.lineTo(200, 300);
+    ctx.lineTo(550, 300);
     ctx.closePath(); 
     ctx.fillStyle = "darkgreen";
     ctx.fill();
@@ -69,7 +69,7 @@ function drawScene() {
 }
 
 function animateSunrise() {
-    if (sunY > 60) {  
+    if (sunY > 40) {  
         sunY -= 1;
         drawScene(); 
         requestAnimationFrame(animateSunrise); 
